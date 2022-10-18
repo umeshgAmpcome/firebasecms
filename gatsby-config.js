@@ -13,11 +13,20 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-plugin-sass`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `fbwwg8r38qya`,
+        accessToken: `yyRmvx7hUhfkf565SI5QI8aFnJUZ4yN8iyyhdUPN6Os`,
       },
     },
     {

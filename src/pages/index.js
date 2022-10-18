@@ -1,94 +1,99 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
-
-import Bio from "../components/bio"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Homehero from "../components/UI/home/homehero"
+import FirebaseStart from "../components/UI/home/FirebaseStart"
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
-
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
+const home = ({ data }) => {
+  console.log(data)
+  const heroheading = data.allContentfulHero.edges[0].node.mainHeading
+  const subheading = data.allContentfulHero.edges[0].node.subHeading
+  const styleButton = data.allContentfulHero.edges[0].node.styleButton
+  const logo1 = data.allContentfulHero.edges[0].node.logo1
+  const logo2 = data.allContentfulHero.edges[0].node.logo2
+  const logo3 = data.allContentfulHero.edges[0].node.logo3
+  const logo4 = data.allContentfulHero.edges[0].node.logo4
+  const logo5 = data.allContentfulHero.edges[0].node.logo5
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
+    <Layout>
+      <div className="home">
+        <Homehero
+          heading={heroheading}
+          subHead={subheading}
+          styleButton={styleButton}
+          logo1={logo1}
+          logo2={logo2}
+          logo3={logo3}
+          logo4={logo4}
+          logo5={logo5}
+        />
+        <FirebaseStart />
+      </div>
     </Layout>
   )
 }
+export default home
 
-export default BlogIndex
-
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="All posts" />
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        fields {
-          slug
+export const query = graphql`
+  query MyQuery {
+    allContentfulHero(filter: { pageId: { eq: "home" } }) {
+      edges {
+        node {
+          id
+          mainHeading
+          subHeading
+          styleButton
+          logo1 {
+            url
+          }
+          logo2 {
+            url
+          }
+          logo3 {
+            url
+          }
+          logo4 {
+            url
+          }
+          logo5 {
+            url
+          }
         }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-        }
       }
+      totalCount
     }
   }
+  # query MyQuery {
+  #   allContentfulHero {
+  #     edges {
+  #       node {
+  #         mainHeading
+  #         subHeading
+  #       }
+  #     }
+  #   }
+  # }
 `
+// export const pageQuery = graphql`
+//   query {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+//       nodes {
+//         excerpt
+//         fields {
+//           slug
+//         }
+//         frontmatter {
+//           date(formatString: "MMMM DD, YYYY")
+//           title
+//           description
+//         }
+//       }
+//     }
+//   }
+// `

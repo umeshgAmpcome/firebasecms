@@ -1,0 +1,148 @@
+/* mixins css */
+// clearfix for floated elemments
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// absolute center
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// absolute by left 0
+@mixin abs {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// flex center
+@mixin flexCenter($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+// flex start
+@mixin flexStartRow() {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+// flex Space Between
+@mixin flexBetweenRow() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+@mixin Button() {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+@mixin styleButton {
+  width: 110px;
+  padding: 0.5rem;
+  border: double 1.5px transparent;
+  border-radius: 80px;
+  background-image: linear-gradient(#020314, #020314),
+    radial-gradient(circle at top left, rgb(237, 50, 156), #f88707);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+@mixin transparentlink {
+  width: 30%;
+  height: 1.9rem;
+  transition: 0.2s;
+  color: #ededef;
+  font-size: 0.8rem;
+  display: flex;
+  font-size: smaller;
+  justify-content: center;
+  line-height: 1.4rem;
+  text-decoration: none;
+  align-items: center;
+  grid-column-gap: 0.5rem;
+  border: 1px solid hsla(0, 0%, 100%, 0.08);
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 0.4rem;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+}
+
+// MEDIA QUERY MANAGER
+/*
+  0 - 600px:      Phone
+  600 - 900px:    Tablet portrait
+  900 - 1200px:   Tablet landscape
+  [1200 - 1800] is where our normal styles apply
+  1800px + :      Big desktop
+  $breakpoint arguement choices:
+  - phone
+  - tab-port
+  - tab-land
+  - big-desktop
+  ORDER: Base + typography > general layout + grid > page layout > components
+  1em = 16px
+  */
+@mixin res($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 375px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-sm {
+    @media only screen and (max-width: 576px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab {
+    @media only screen and (max-width: 834px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-lg {
+    @media only screen and (max-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desk-sm {
+    @media only screen and (max-width: 1300px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desk {
+    @media only screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desk-lg {
+    @media only screen and (min-width: 1441px) {
+      @content;
+    }
+  }
+}
+
+// custome responsive mixin
+@mixin cusResponsive($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
