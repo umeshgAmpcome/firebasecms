@@ -12,7 +12,7 @@ const pricing = ({ data }) => {
 
   return (
     <Layout>
-      <div className="hero_section">
+      <div className="pricing">
         <Hero
           heading={heroheading}
           subHead={subheading}

@@ -10,7 +10,7 @@ export default function FirebaseMailroomandAgent() {
           <button href="#" className="firebasemail">
             Firebase Mailroom&trade;
           </button>
-          <h3>The smartest home for all your mail.</h3>
+          <h4>The smartest home for all your mail.</h4>
           <p>
             Get a professional business address and virtual mailbox to instantly
             manage all your mailing needs - online, from any device.
@@ -41,7 +41,7 @@ export default function FirebaseMailroomandAgent() {
           <button href="" className="firebasemail">
             Firebase Agent&trade;
           </button>
-          <h3>Legal compliance on autopilot.</h3>
+          <h4>Legal compliance on autopilot.</h4>
           <p>
             Never miss a deadline with our nationwide Registered Agent service
             and dashboard that automates compliance reminders, notices, annual

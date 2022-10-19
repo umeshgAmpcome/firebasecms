@@ -7,7 +7,7 @@ export default function Firebaseloop() {
       <div className="inner">
         <div className="center">
           <a className="transparent" href="/firebasepages/FirebaseLoop">
-            Firebase Loop
+            Firebase Loop&trade;
           </a>
           <h2>Instant access to the best growth tools.</h2>
           <p>

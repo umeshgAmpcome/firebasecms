@@ -2,26 +2,20 @@ nav {
   min-width: 100vw;
   background-color: #020314;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   position: fixed;
+  z-index: 2;
   height: 4rem;
-  // & .banner {
-  //   text-align: center;
-  //   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  //   font-size: 0.75rem;
-  //   color: white;
-  //   font-weight: 400;
-  //   padding: 8px 0px;
-  //   // a {
-  //     // color: #c82461;
-  //     // text-decoration: none;
-  //   // }
-  // }
+  // border: 2px solid salmon;
+
   & .links {
-    padding: 8px 0;
+    padding: 10px 0;
+    // border: 2px solid salmon;
+    width: 85vw;
     display: flex;
-    justify-content: center;
-    gap: 10rem;
+    justify-content: space-between;
     a {
       text-decoration: none;
       font-family: "Roboto", sans-serif;
@@ -29,20 +23,19 @@ nav {
       color: #a09fa6;
       font-size: 0.875rem;
     }
-    & .image {
-      //   border: 2px solid red;
-      // width: 18%;
+    & img {
+      // border: 2px solid red;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 7vh;
+      width: fit-content;
     }
     & .nav_links {
       align-items: center;
       display: flex;
       gap: 1rem;
       // border: 2px solid red;
-      // width: 45%;
       justify-content: space-evenly;
       & .arrow {
         padding-top: 5px;

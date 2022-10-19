@@ -82,10 +82,9 @@ export default function Footer() {
         </div>
         <div className="footerbottom">
           <div className="left">
-            <p>
-              © 2022 Firstbase.io, Inc. All rights reserved. · Terms of Use ·
-              Privacy Policy
-            </p>
+            <p>© 2022 Firstbase.io, Inc. All rights reserved.</p>
+            <Link>· Terms of Use </Link>
+            <Link>· Privacy Policy</Link>
           </div>
           <div className="right">
             <a href="https://twitter.com/tryfirstbase" alt="_blank">

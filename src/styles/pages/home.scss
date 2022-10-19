@@ -6,6 +6,11 @@
   // border: 2px solid lawngreen;
   width: 85vw;
   @include flexCenter(column);
+  a.transparent {
+    width: 8rem;
+    align-self: center;
+    font-size: smaller;
+  }
   & .hero_section {
     color: white;
     height: fit-content;
@@ -13,6 +18,9 @@
     // border: 2px solid rgb(62, 8, 143);
     @include flexCenter(column);
     @include backgroundImage();
+    // background-position: center;
+    // background-size: contain;
+    // background-repeat: no-repeat;
     & .hero_status {
       // border: 2px solid rgb(62, 8, 143);
       margin-top: 1rem;
@@ -54,7 +62,7 @@
     }
     & .container_video {
       height: fit-content;
-      width: 85vw;
+      width: 84vw;
       object-fit: cover;
       // border: 2px solid red;
       border-radius: 10px;
@@ -90,10 +98,9 @@
     height: 100%;
     gap: 2rem;
     width: 100vw;
+    // border: 2px solid blue;
     @include flexCenter(column);
     @include backgroundImage();
-    background-size: auto;
-    border: none;
     margin-top: 8%;
     // border: none;
     & .firebase_section {
@@ -111,11 +118,11 @@
       & .firebase_lower {
         height: 100%;
         // border: 2px solid rgb(255, 38, 5);
-        width: 80vw;
-        gap: 1rem;
+        width: 85vw;
+        // gap: 1rem;
         & .firebase_lowerupper {
           height: 100%;
-          width: 80vw;
+          width: 85vw;
           padding: 2.6rem 0rem;
           @include shadowbox();
           @include flexMiddle();
@@ -141,37 +148,40 @@
           }
         }
         & .firebase_lowerlower {
-          border: 2px solid rgb(32, 122, 218);
+          // border: 2px solid rgb(32, 122, 218);
           height: 100%;
-          width: 80vw;
+          width: 84vw;
           margin-top: 20px;
           padding: 0;
           text-align: flex-start;
-          // @include flexBetweenRow();
           display: flex;
           align-items: center;
           justify-content: space-between;
           flex-wrap: wrap;
 
           & .mlcontainer {
-            border: 2px solid goldenrod;
-            width: 39vw;
+            // border: 2px solid goldenrod;
+            width: 41vw;
             height: 35rem;
             border-radius: 1rem;
             background-color: rgba(10, 11, 30, 0.5);
             text-align: start;
             padding: 0px 20px;
             @include flexCenter(column);
-            justify-content: space-between;
+            justify-content: space-around;
             & .content {
-              border: 2px solid red;
+              // border: 2px solid red;
               margin: 0;
+              & a {
+                display: flex;
+                align-items: center;
+              }
             }
             & img {
               object-fit: cover;
               align-self: center;
-              width: 100%;
-              border: 2px solid red;
+              width: 30vw;
+              // border: 2px solid red;
             }
           }
         }
@@ -181,11 +191,12 @@
 
   /* Firebase Loop Start */
   & .firebaseloop {
-    width: 90vw;
+    width: 85vw;
     margin: 4%;
     padding: 20px 0px;
     height: 100%;
     @include backgroundImage();
+    // border: 2px solid rgb(174, 138, 138);
     @include flexCenter(column);
     & .inner {
       // border: 2px solid rgb(174, 138, 138);
@@ -196,10 +207,11 @@
         // border: 2px solid saddlebrown;
         padding: 20px;
         @include flexCenter(column);
-        width: 80vw;
+        width: 85vw;
         & a.transparent {
-          width: 8rem;
-          align-self: center;
+          @include transparentlink();
+          width: fit-content;
+          height: fit-content;
           font-size: smaller;
         }
         & h2 {
@@ -214,7 +226,8 @@
           // border: 2px solid red;
           & a:nth-child(1) {
             @include styleButton();
-            width: 195px;
+            width: fit-content;
+            height: fit-content;
           }
           & a:nth-child(1):hover {
             @include hover();
@@ -240,25 +253,23 @@
       & .threepages {
         margin-top: 5%;
         // border: 2px solid rgb(106, 192, 49);
-        height: 80%;
-        width: 80vw;
-        gap: 2rem;
+        height: 100%;
+        width: 85vw;
+        gap: 1.5rem;
         @include flexCenter(column);
         justify-content: space-between;
         & ._links {
           height: fit-content;
-          width: 80vw;
-          margin: 10px 0px;
+          width: 85vw;
           // border: 2px solid red;
           display: flex;
           flex-direction: row;
           gap: 1rem;
-          justify-content: space-evenly;
+          justify-content: space-between;
           & a {
-            // border: 2px solid red;
-            padding: 10px 20px;
+            padding: 10px 5px 0px 10px;
             width: 30vw;
-            height: 10;
+            // height: 10;
             border-radius: 10px;
             -webkit-border-radius: 10px;
             -moz-border-radius: 10px;
@@ -266,7 +277,9 @@
             -o-border-radius: 10px;
             & p {
               font-size: 0.9rem;
-              margin-top: 6px;
+              width: 100%;
+              margin: 0;
+              // margin-top: 3px;
             }
           }
           & a:hover {
@@ -277,7 +290,7 @@
           }
         }
         & #_image {
-          width: 80vw;
+          width: 84vw;
           height: 100%;
           background-position: center;
           & img {
@@ -293,7 +306,7 @@
   & .section_rolling {
     height: 30%;
     // border: 2px solid red;
-    width: 85vw;
+    width: 84vw;
     @include flexCenter(column);
     & .rollingcontent {
       flex-direction: column;
@@ -323,13 +336,12 @@
       overflow: hidden;
       position: relative;
       width: 100vw;
-      // width: 60%;
-
       &::before,
       &::after {
         // @include white-gradient;
+        // border: 2px solid rgb(17, 196, 112);
         content: "";
-        height: 100px;
+        height: 120px;
         position: absolute;
         width: 200px;
         z-index: 2;
@@ -347,10 +359,11 @@
       }
 
       .slide-track {
+        // border: 2px solid red;
         animation: scroll $animationSpeed linear infinite;
         display: flex;
         width: calc(150px * 14);
-        padding: 10px;
+        padding: 4px;
         justify-content: space-evenly;
         -webkit-animation: scroll $animationSpeed linear infinite;
 
@@ -407,7 +420,7 @@
       @include flexCenter(column);
       text-align: center;
       justify-content: space-evenly;
-      width: 65vw;
+      width: 60vw;
       height: fit-content;
       position: absolute;
       top: 50%;
@@ -419,6 +432,7 @@
       -o-transform: translate(-50%, -50%);
       & h3 {
         margin: 20px;
+        line-height: 2rem;
       }
     }
     & .block1 {
@@ -573,8 +587,9 @@
     // max-height: 400vh;
     & .macontainer {
       @include transparentlink();
-      height: 100%;
+      height: 25rem;
       @include flexCenter(row);
+      // border: 2px solid red;
       flex-wrap: wrap;
       width: 85vw;
       gap: 4rem;
@@ -587,9 +602,9 @@
           @include transparentlink();
         }
         & p {
-          margin: 15px 0px;
-          font-size: 1.1rem;
-          color: #a09fa6;
+          margin-top: 5px;
+          padding: 0;
+          font-size: 1rem;
         }
       }
       & .right {
@@ -610,6 +625,7 @@
   & .homesectionsupport {
     // border: 2px solid red;
     width: 85vw;
+    margin-top: 4rem;
     gap: 2rem;
     height: fit-content;
     margin-bottom: 10%;
@@ -625,7 +641,7 @@
       width: 85vw;
       display: flex;
       align-items: center;
-      // justify-content: space-evenly;
+      justify-content: space-evenly;
       gap: 1rem;
       flex-wrap: wrap;
       & .supcontainer {
@@ -663,11 +679,15 @@
     width: 85vw;
     height: 100%;
     gap: 1rem;
-    // border: 2px solid red;
     text-align: center;
+    // border: 2px solid red;
     @include flexCenter(column);
-    & .inner_logo {
+    & .inner_content {
       // border: 2px solid red;
+      @include flexCenter(column);
+    }
+    & .inner_logo {
+      // border: 2px solid rgb(30, 132, 188);
       padding: 10px;
       height: 100%;
       gap: 1rem;
