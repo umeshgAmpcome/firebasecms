@@ -18,6 +18,7 @@ const pricing = ({ data }) => {
           subHead={subheading}
           styleButton={styleButton}
         />
+        hi
         <Ctalastsection />
       </div>
     </Layout>
