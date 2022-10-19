@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  // flex-wrap: wrap;
   & p {
     color: white;
     font-size: 0.8em;
@@ -24,22 +25,22 @@
     display: flex;
     flex-wrap: wrap;
     & .footerupper {
-      height: 250px;
-      max-height: 500px;
+      height: fit-content;
       //   border: 2px solid green;
       width: 100%;
       display: flex;
+      justify-content: space-between;
       //   flex-direction: row;
-      padding-top: 50px;
+      padding-top: 1rem;
       & .left {
         // border: 2px solid red;
-        width: 55%;
+        width: fit-content;
         height: 250px;
       }
       & .right {
         // border: 2px solid red;
         height: 250px;
-        width: 45%;
+        width: fit-content;
         padding: 0;
         display: flex;
         // text-align: center;

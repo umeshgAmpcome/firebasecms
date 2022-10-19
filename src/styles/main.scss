@@ -3,12 +3,13 @@
 @import "./abstract/variables";
 
 //Layout
-@import "./components/home.scss";
 @import "./Layout.scss";
-@import "./header/navbar.scss";
-@import "./footer/footer.scss"
+@import "../styles/components/hero.scss";
 
-// @import "./components/Home/Home.scss"; // @import "./Layout/Footer.scss";
+@import "./pages/home.scss";
+@import "./header/navbar.scss";
+@import "./components/ctaLastsection.scss";
+@import "./footer/footer.scss"; // @import "./components/Home/Home.scss"; // @import "./Layout/Footer.scss";
 
 //Pages
 // @import "./pages/home.scss";
@@ -16,3 +17,10 @@
 // @import "./pages/nursing.scss";
 // @import "./pages/company.scss";
 // @import "./pages/contactus.scss"
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}

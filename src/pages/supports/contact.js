@@ -1,10 +1,10 @@
 import React from "react"
 import Layout from "../../components/layout"
 
-export default function careers() {
+export default function contact() {
   return (
     <Layout>
-      <div>careers</div>
+      <div>contact us</div>
     </Layout>
   )
 }

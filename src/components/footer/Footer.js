@@ -17,42 +17,49 @@ export default function Footer() {
           <div className="right">
             <div className="first">
               <p>Products</p>
-              <a href="">Firebase start</a>
+              <a href="/firebasepages/FirebaseStart">Firebase start</a>
               <br />
-              <a href="">Firebase loop </a> <br />
-              <a href="">Firebase Mailroom</a>
+              <a href="/firebasepages/FirebaseLoop">Firebase loop </a> <br />
+              <a href="/firebasepages/FirebaseMailroom">Firebase Mailroom</a>
               <br />
-              <a href="">Firebase Agent</a>
+              <a href="/firebasepages/FirebaseAgent">Firebase Agent</a>
               <br />
-              <a href="">Incorporation API</a>
+              <a href="/firebasepages/IncorporationApi">Incorporation API</a>
               <br />
-              <a href="">Pricing</a>
+              <Link href="/pricing">Pricing</Link>
               <br />
-              <a href="">Rewards</a>
+              <Link to="/rewards">Rewards</Link>
             </div>
             <div className="second">
               <p>Company</p>
-              <a href="">About us</a>
+              <a href="/company/aboutus">About us</a>
               <br />
-              <a href="">Careers</a>
+              <a href="/company/careers">Careers</a>
             </div>
             <div className="third">
               <p>Resources</p>
-              <a href="">Blog </a>
+              <Link href="https://www.firstbase.io/blog">Blog </Link>
               <br />
-              <a href="">Founder's Guide </a> <br />
-              <a href="">Free Businees Name Check</a>
+              <Link href="https://www.firstbase.io/guide">Founder's Guide</Link>
               <br />
-              <a href="">Name Check Widget</a>
+              <Link href="https://www.firstbase.io/business-name-check">
+                Free Businees Name Check
+              </Link>
               <br />
-              <a href="">LLC vs. C-Corp</a>
+              <Link href="https://www.firstbase.io/business-name-check-partners">
+                Name Check Widget
+              </Link>
+              <br />
+              <Link href="https://form.typeform.com/to/Tr7SUD3Y?typeform-source=firstbase-io.webflow.io">
+                LLC vs. C-Corp
+              </Link>
               <br />
             </div>
             <div className="fourth">
               <p>Supports</p>
-              <a href="">Help Center</a>
+              <a href="/supports/helpcenter">Help Center</a>
               <br />
-              <a href="">Contact Us </a> <br />
+              <a href="/supports/contact">Contact Us </a> <br />
             </div>
           </div>
         </div>
@@ -76,8 +83,21 @@ export default function Footer() {
             </p>
           </div>
           <div className="right">
-            <a href="">Twitter</a>.<a href="">Linkdin</a>.
-            <a href="">Instagram</a>.<a href="">Youtube</a>
+            <a href="https://twitter.com/tryfirstbase" alt="_blank">
+              Twitter .
+            </a>
+            <a
+              href="https://www.linkedin.com/company/firstbase-io/"
+              alt="_blank"
+            >
+              Linkdin.
+            </a>
+            <a href="https://www.instagram.com/firstbase.io/" alt="_blank">
+              Instagram .
+            </a>
+            <a href="https://www.youtube.com/c/Firstbase" alt="_blank">
+              Youtube.
+            </a>
           </div>
         </div>
       </div>

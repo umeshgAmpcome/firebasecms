@@ -2,7 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 
 // <img src={logo1.url} alt="" />
-export default function Homehero({
+export default function Hero({
+  pageId,
   heading,
   subHead,
   styleButton,
@@ -53,10 +54,7 @@ export default function Homehero({
         autoPlay
         loop
         src="https://assets.website-files.com/609486d2fafa37698a57db5b/628d5e7d4d650e8461de6c7c_CleanShot%202022-05-24%20at%20153116-transcode.mp4"
-      >
-        <track kind="captions" {...props} />
-      </video>
-
+      ></video>
       <div className="companies">
         <p>TRUSTED BY THE WORLD’S MOST INNOVATIVE COMPANIES</p>
         <div className="trusted">

@@ -1,0 +1,653 @@
+/*  ----home start---- */
+// @import "./greatcompanies.scss";
+// @import "../components/hero.scss";
+// @import "../components/ctaLastsection.scss";
+.home {
+  color: $white;
+  padding: 1rem 0rem;
+  gap: 2rem;
+  // border: 2px solid lawngreen;
+  width: 100%;
+  @include flexCenter(column);
+  & a.transparent {
+    @include transparentlink();
+    & span {
+      color: orange;
+    }
+  }
+  & ._buttons {
+    width: 350px;
+    padding: 10px;
+    a {
+      width: 110px;
+      font-size: medium;
+      border: none;
+    }
+    & a:nth-child(1) {
+      margin-right: 10px;
+      @include styleButton();
+    }
+    a:nth-child(1):hover {
+      @include hover();
+    }
+  }
+
+  /* Firebase Start start */
+  & .firebasestart {
+    height: 100%;
+    gap: 2rem;
+    width: 100vw;
+    @include flexCenter(column);
+    @include backgroundImage();
+    background-size: auto;
+    margin-top: 8%;
+    // border: 2px solid red;
+    & .firebase_section {
+      // border: 2px solid red;
+      height: 60%;
+      width: 85vw;
+      gap: 2rem;
+      @include flexCenter(column);
+      & .firebase_upper {
+        width: 62vw;
+        @include flextLeftColumn();
+        // padding: 0px 60px;
+        margin: 0px 60px;
+        border: none;
+        // border: 2px solid rgb(25, 202, 64);
+        height: 65%;
+        & a.transparent {
+          width: 10rem;
+          font-size: smaller;
+        }
+        & ._buttons {
+          & a {
+            @include styleButton();
+          }
+        }
+      }
+      & .firebase_lower {
+        height: 100%;
+        // border: 2px solid saddlebrown;
+        width: 80vw;
+        gap: 4rem;
+        & .firebase_lowerupper {
+          height: 25%;
+          width: 80vw;
+          @include shadowbox();
+          display: flex;
+          // border: 2px solid rgb(29, 181, 223);
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          & .firebasecontent_left {
+            // border: 2px solid lightcoral;
+            width: 35vw;
+            padding: 20px;
+            // @include flexBetweenRow();
+            flex-direction: column;
+          }
+          & .firebaseimage_right {
+            @include flexCenter(column);
+            & img {
+              width: 40vw;
+              height: 100%;
+              background-position: center;
+              background-size: cover;
+              background-image: url("");
+            }
+          }
+        }
+        & .firebase_lowerlower {
+          // border: 2px solid goldenrod;
+          height: 100%;
+          width: 80vw;
+          gap: 2rem;
+          // @include flexBetweenRow();
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          & .mlcontainer {
+            width: 38vw;
+            height: 100%;
+            border-radius: 1rem;
+            background-color: rgba(10, 11, 30, 0.5);
+            -webkit-border-radius: 1rem;
+            -moz-border-radius: 1rem;
+            -ms-border-radius: 1rem;
+            -o-border-radius: 1rem;
+            text-align: start;
+            padding: 25px;
+            @include flexCenter(column);
+            & p {
+              width: 95%;
+            }
+            & img {
+              align-self: center;
+              margin-top: 10%;
+              width: 90%;
+              // border: 2px solid red;
+            }
+          }
+        }
+      }
+    }
+  } /* Firebase Start End */
+
+  /* Firebase Loop Start */
+  & .firebaseloop {
+    width: 90vw;
+    margin: 4%;
+    padding: 20px 0px;
+    height: 100%;
+    @include backgroundImage();
+    @include flexCenter(column);
+    & .inner {
+      // border: 2px solid rgb(174, 138, 138);
+      width: 85vw;
+      height: 100%;
+      @include flexCenter(column);
+      & .center {
+        // border: 2px solid saddlebrown;
+        padding: 20px;
+        @include flexCenter(column);
+        width: 80vw;
+        & a.transparent {
+          width: 8rem;
+          align-self: center;
+          font-size: smaller;
+        }
+        & h2 {
+          margin: 10px;
+        }
+        & p {
+          margin: 15px;
+        }
+        & ._buttons {
+          @include flexCenter(column);
+          @include Button();
+          // border: 2px solid red;
+          & a:nth-child(1) {
+            @include styleButton();
+            width: 195px;
+          }
+          & a:nth-child(1):hover {
+            @include hover();
+          }
+        }
+        & .tooleslogo {
+          width: 80vw;
+          height: 100%;
+          // border: 2px solid red;
+          text-align: center;
+          display: flex;
+          justify-content: space-evenly;
+          margin-top: 5%;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 2rem;
+          & img {
+            height: 4rem;
+            width: 80px;
+          }
+        }
+      }
+      & .threepages {
+        margin-top: 5%;
+        // border: 2px solid rgb(106, 192, 49);
+        height: 80%;
+        width: 80vw;
+        gap: 2rem;
+        @include flexCenter(column);
+        justify-content: space-between;
+        & ._links {
+          height: fit-content;
+          width: 80vw;
+          margin: 10px 0px;
+          // border: 2px solid red;
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+          justify-content: space-evenly;
+          & a {
+            // border: 2px solid red;
+            padding: 10px 20px;
+            width: 30vw;
+            height: 10;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            & p {
+              font-size: 0.9rem;
+              margin-top: 6px;
+            }
+          }
+          & a:hover {
+            background-color: rgba(130, 141, 186, 0.16);
+          }
+          & a:active {
+            background-color: rgba(130, 141, 186, 0.16);
+          }
+        }
+        & #_image {
+          width: 80vw;
+          height: 100%;
+          background-position: center;
+          & img {
+            width: 100%;
+            height: 100vh;
+          }
+        }
+      }
+    }
+  } /* Firebase Loop End */
+
+  /* Section Rolling Start */
+  & .section_rolling {
+    height: 30%;
+    // border: 2px solid red;
+    width: 85vw;
+    @include flexCenter(column);
+    & .rollingcontent {
+      flex-direction: column;
+      display: flex;
+      margin: 30px 0px;
+      & p {
+        text-align: center;
+      }
+      & ._buttons {
+        @include styleButton();
+        width: 180px;
+        border: none;
+        align-self: center;
+        justify-content: center;
+        & a:nth-child(1) {
+          width: 130px;
+          padding: 0.5rem;
+        }
+      }
+    }
+
+    & .slider {
+      // border: 2px solid gold;
+      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+      height: 70%;
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      width: 100vw;
+      // width: 60%;
+
+      &::before,
+      &::after {
+        // @include white-gradient;
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+      }
+
+      &::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+      }
+
+      &::before {
+        left: 0;
+        top: 0;
+      }
+
+      .slide-track {
+        animation: scroll $animationSpeed linear infinite;
+        display: flex;
+        width: calc(150px * 14);
+        padding: 10px;
+        justify-content: space-evenly;
+        -webkit-animation: scroll $animationSpeed linear infinite;
+
+        .slide {
+          height: 100px;
+          width: 100px;
+          // border: 2px solid gold;
+
+          & img {
+            height: 90px;
+            // border: 2px solid red;
+            width: 80px;
+          }
+        }
+      }
+    }
+    // & .slider:nth-child(1) {
+    //   margin-left: 50px;
+    // }
+
+    & .slider:nth-child(2) {
+      padding-left: 55px;
+    }
+    & .slider:nth-child(3) {
+      padding-left: 5px;
+    }
+    & .slider:nth-child(4) {
+      padding-left: 55px;
+    }
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-150px * 7));
+        -webkit-transform: translateX(calc(-150px * 7));
+        -moz-transform: translateX(calc(-150px * 7));
+        -ms-transform: translateX(calc(-150px * 7));
+        -o-transform: translateX(calc(-150px * 7));
+      }
+    }
+  } /* Section Rolling End */
+
+  /* Blink Section Start */
+  & .blinksection {
+    margin: 20px 0px;
+    width: 85vw;
+    height: 80vh;
+    position: relative;
+    // border: 2px solid red;
+    @include flexCenter(column);
+    & .block {
+      // border: 2px solid red;
+      @include flexCenter(column);
+      text-align: center;
+      justify-content: space-evenly;
+      width: 65vw;
+      height: fit-content;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      & .brand {
+        // border: 2px solid red;
+      }
+      & h3 {
+        margin: 20px;
+      }
+    }
+    & .block1 {
+      animation: block1 15s linear infinite;
+      -webkit-animation: block1 15s linear infinite;
+    }
+    & .block2 {
+      animation: block2 15s linear infinite;
+      -webkit-animation: block2 15s linear infinite;
+    }
+    & .block3 {
+      animation: block3 15s linear infinite;
+      -webkit-animation: block3 15s linear infinite;
+    }
+    .profile {
+      width: 10vw;
+      // border: 2px solid red;
+      height: 30%;
+      padding: 0;
+      & img {
+        width: 5vw;
+        height: 50%;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+      }
+    }
+    & p {
+      margin: 0;
+    }
+  }
+  @keyframes block1 {
+    0% {
+      opacity: 1;
+    }
+    10% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0;
+    }
+    70% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes block2 {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 0;
+    }
+    70% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes block3 {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0;
+    }
+    70% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  } /* Blink Section End */
+
+  /* Firebase Mailroom Start */
+  & .mailandagent {
+    // border: 2px solid red;
+    @include backgroundImage();
+    height: 100%;
+    gap: 2rem;
+    @include flexCenter(column);
+    background-repeat: no-repeat;
+    width: 85vw;
+    justify-content: space-evenly;
+
+    // max-height: 400vh;
+    & .macontainer {
+      @include transparentlink();
+      height: 100%;
+      @include flexCenter(row);
+      flex-wrap: wrap;
+      width: 85vw;
+      gap: 4rem;
+      & .left {
+        // border: 2px solid rgb(33, 184, 118);
+        width: 45vw;
+        height: fit-content;
+        padding: 10px;
+        & .firebasemail {
+          @include transparentlink();
+        }
+        & p {
+          margin: 15px 0px;
+          font-size: 1.1rem;
+          color: #a09fa6;
+        }
+      }
+      & .right {
+        width: 30vw;
+        & img {
+          width: 100%;
+        }
+      }
+    }
+    // & .agent {
+    //   @include transparentlink();
+    //   border: 2px solid rgb(33, 184, 118);
+    //   width: 85%;
+    //   height: 50vh;
+    // }
+  } /* Firebase Mailroom End */
+
+  & .homesectionsupport {
+    // border: 2px solid red;
+    width: 85vw;
+    gap: 2rem;
+    height: fit-content;
+    margin-bottom: 10%;
+    @include flexCenter(column);
+    & .innerupper {
+      // border: 2px solid red;
+      text-align: center;
+      height: 20%;
+    }
+    & .innerlower {
+      // border: 2px solid red;
+      height: 100%;
+      width: 85vw;
+      display: flex;
+      align-items: center;
+      // justify-content: space-evenly;
+      gap: 1rem;
+      flex-wrap: wrap;
+      & .supcontainer {
+        @include transparentlink();
+        // border: 2px solid red;
+        width: 32%;
+        height: 13rem;
+        display: flex;
+        // flex-wrap: wrap;
+        @include flexCenter(column);
+        // padding: 30px;
+
+        text-align: center;
+        & img {
+          @include transparentlink();
+          height: 8vh;
+          width: 15%;
+          background-image: linear-gradient(
+              180deg,
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),
+            linear-gradient(225deg, #d5e0f1, #a0acbe);
+        }
+        & p {
+          margin-top: 10px;
+        }
+        // border: 2px solid red;
+      }
+    }
+  }
+
+  /* GreateCompanies Start */
+  & .greatcompanies {
+    width: 85vw;
+    height: 100%;
+    gap: 1rem;
+    // border: 2px solid red;
+    text-align: center;
+    @include flexCenter(column);
+    & .inner_logo {
+      // border: 2px solid red;
+      padding: 10px;
+      height: 100%;
+      gap: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      width: 85vw;
+      justify-content: space-evenly;
+      & a {
+        @include transparentlink();
+        width: 15vw;
+        height: 18vh;
+
+        @include flexCenter(column);
+        // border: 2px solid red;
+      }
+      & img {
+        width: 50%;
+        // border: 2px solid red;
+        height: 10vh;
+      }
+    }
+  }
+  /* GreateCompanies End*/
+}
+/* home end */

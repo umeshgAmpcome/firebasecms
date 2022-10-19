@@ -38,6 +38,14 @@
   justify-content: flex-start;
   flex-direction: row;
 }
+
+//flex left
+@mixin flextLeftColumn {
+  display: flex;
+  align-self: start;
+  flex-direction: column;
+  align-items: flex-start;
+}
 // flex Space Between
 @mixin flexBetweenRow() {
   display: flex;
@@ -65,8 +73,25 @@
   -ms-border-radius: 0.25rem;
   -o-border-radius: 0.25rem;
 }
+@mixin shadowbox {
+  border: 1px solid hsla(0, 0%, 100%, 0.06);
+  border-radius: 1rem;
+  background-color: rgba(10, 11, 30, 0.5);
+}
+@mixin hover {
+  background: white;
+  color: black;
+}
+
+@mixin backgroundImage {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("https://assets.website-files.com/609486d2fafa37698a57db5b/628e756e9f4514d25e1825d3_agent-herobg.svg");
+}
 @mixin transparentlink {
-  width: 30%;
+  width: fit-content;
+  padding: .2rem;
   height: 1.9rem;
   transition: 0.2s;
   color: #ededef;

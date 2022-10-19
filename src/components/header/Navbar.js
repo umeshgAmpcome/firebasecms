@@ -1,12 +1,15 @@
 import { Link } from "gatsby"
 import React from "react"
-import { AiOutlineDown } from "react-icons/Ai"
+// import { AiOutlineDown } from "react-icons/Ai"
 
 export default function Navbar() {
   return (
     <nav>
       <div className="banner">
-        Firebase Live: Q&A. <a href="#">Register Now </a>
+        Firebase Live: Q&A.
+        <a href="https://calendly.com/communityfirstbaseio/firstbase-live-qa">
+          Register Now
+        </a>
       </div>
       <div className="links">
         <div className="image">
@@ -19,12 +22,8 @@ export default function Navbar() {
         </div>
         <div className="nav_links">
           <Link to="/"></Link>
-          <Link to="/products">
-            Products
-          </Link>
-          <Link to="/company">
-            Company
-          </Link>
+          <Link to="/products">Products</Link>
+          <Link to="/company">Company</Link>
           <Link to="/pricing">Pricing</Link>
           <Link to="/rewards">Rewards</Link>
           <Link to="/partners">Partners</Link>
