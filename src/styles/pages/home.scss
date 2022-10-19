@@ -1,34 +1,87 @@
 /*  ----home start---- */
-// @import "./greatcompanies.scss";
-// @import "../components/hero.scss";
-// @import "../components/ctaLastsection.scss";
+@import "../components/hero.scss";
 .home {
   color: $white;
-  padding: 1rem 0rem;
   gap: 2rem;
   // border: 2px solid lawngreen;
-  width: 100%;
+  width: 85vw;
   @include flexCenter(column);
-  & a.transparent {
-    @include transparentlink();
-    & span {
-      color: orange;
+  & .hero_section {
+    color: white;
+    height: fit-content;
+    width: 85vw;
+    // border: 2px solid rgb(62, 8, 143);
+    @include flexCenter(column);
+    @include backgroundImage();
+    & .hero_status {
+      // border: 2px solid rgb(62, 8, 143);
+      margin-top: 1rem;
+      color: #a09fa6;
+      height: 3rem;
+      display: flex;
+      width: 18rem;
+      padding: 10px;
+      // @include flexCenter(row);
+      justify-content: space-between;
+      & .hero_status_data {
+        width: 33%;
+        padding: 0;
+        margin: 0;
+        // border: 2px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & h5 {
+          font-size: smaller;
+          color: white;
+          font-weight: 500;
+          font-size: 0.8rem;
+          margin: 0;
+        }
+        & p {
+          margin: 0;
+          font-size: 0.7rem;
+          // font-size: small;
+          padding: 0;
+        }
+      }
+      & .bar {
+        background-color: gray;
+        // border: 2px solid red;
+        width: 1px;
+        height: 30px;
+      }
     }
-  }
-  & ._buttons {
-    width: 350px;
-    padding: 10px;
-    a {
-      width: 110px;
-      font-size: medium;
-      border: none;
+    & .container_video {
+      height: fit-content;
+      width: 85vw;
+      object-fit: cover;
+      // border: 2px solid red;
+      border-radius: 10px;
+      box-shadow: 1px 1px 20px 0 hsl(0deg 0% 100% / 12%);
+      background-size: cover;
+      margin: 3rem;
     }
-    & a:nth-child(1) {
-      margin-right: 10px;
-      @include styleButton();
-    }
-    a:nth-child(1):hover {
-      @include hover();
+    & .companies {
+      width: 85vw;
+      height: fit-content;
+      gap: 1rem;
+      @include flexCenter(column);
+      // border: 2px solid red;
+      & p {
+        font-size: smaller;
+      }
+      & .trusted {
+        width: 85vw;
+        display: flex;
+        // border: 2px solid red;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      & img {
+        height: 3rem;
+        width: 4rem;
+      }
     }
   }
 
@@ -40,57 +93,46 @@
     @include flexCenter(column);
     @include backgroundImage();
     background-size: auto;
+    border: none;
     margin-top: 8%;
-    // border: 2px solid red;
+    // border: none;
     & .firebase_section {
-      // border: 2px solid red;
-      height: 60%;
+      @include flexCenter(column);
+      // border: 2px solid rgb(41, 225, 20);
+      height: 100%;
       width: 85vw;
       gap: 2rem;
-      @include flexCenter(column);
       & .firebase_upper {
-        width: 62vw;
+        width: 55vw;
         @include flextLeftColumn();
-        // padding: 0px 60px;
-        margin: 0px 60px;
-        border: none;
-        // border: 2px solid rgb(25, 202, 64);
-        height: 65%;
-        & a.transparent {
-          width: 10rem;
-          font-size: smaller;
-        }
-        & ._buttons {
-          & a {
-            @include styleButton();
-          }
-        }
+        margin: 0 2rem;
+        // border: 2px solid firebrick;
       }
       & .firebase_lower {
         height: 100%;
-        // border: 2px solid saddlebrown;
+        // border: 2px solid rgb(255, 38, 5);
         width: 80vw;
-        gap: 4rem;
+        gap: 1rem;
         & .firebase_lowerupper {
-          height: 25%;
+          height: 100%;
           width: 80vw;
+          padding: 2.6rem 0rem;
           @include shadowbox();
-          display: flex;
-          // border: 2px solid rgb(29, 181, 223);
-          align-items: center;
-          justify-content: center;
+          @include flexMiddle();
+          // border: 2px solid rgb(255, 38, 5);
+          justify-content: space-evenly;
           flex-wrap: wrap;
           & .firebasecontent_left {
             // border: 2px solid lightcoral;
-            width: 35vw;
-            padding: 20px;
+            width: 41vw;
+            padding: 15px;
             // @include flexBetweenRow();
             flex-direction: column;
           }
           & .firebaseimage_right {
             @include flexCenter(column);
             & img {
-              width: 40vw;
+              width: 37vw;
               height: 100%;
               background-position: center;
               background-size: cover;
@@ -99,35 +141,37 @@
           }
         }
         & .firebase_lowerlower {
-          // border: 2px solid goldenrod;
+          border: 2px solid rgb(32, 122, 218);
           height: 100%;
           width: 80vw;
-          gap: 2rem;
+          margin-top: 20px;
+          padding: 0;
+          text-align: flex-start;
           // @include flexBetweenRow();
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: space-between;
           flex-wrap: wrap;
+
           & .mlcontainer {
-            width: 38vw;
-            height: 100%;
+            border: 2px solid goldenrod;
+            width: 39vw;
+            height: 35rem;
             border-radius: 1rem;
             background-color: rgba(10, 11, 30, 0.5);
-            -webkit-border-radius: 1rem;
-            -moz-border-radius: 1rem;
-            -ms-border-radius: 1rem;
-            -o-border-radius: 1rem;
             text-align: start;
-            padding: 25px;
+            padding: 0px 20px;
             @include flexCenter(column);
-            & p {
-              width: 95%;
+            justify-content: space-between;
+            & .content {
+              border: 2px solid red;
+              margin: 0;
             }
             & img {
+              object-fit: cover;
               align-self: center;
-              margin-top: 10%;
-              width: 90%;
-              // border: 2px solid red;
+              width: 100%;
+              border: 2px solid red;
             }
           }
         }
@@ -373,9 +417,6 @@
       -moz-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       -o-transform: translate(-50%, -50%);
-      & .brand {
-        // border: 2px solid red;
-      }
       & h3 {
         margin: 20px;
       }
@@ -393,12 +434,13 @@
       -webkit-animation: block3 15s linear infinite;
     }
     .profile {
-      width: 10vw;
+      width: 40vw;
       // border: 2px solid red;
-      height: 30%;
+      height: 100%;
       padding: 0;
       & img {
-        width: 5vw;
+        width: 11%;
+        // border: 2px solid red;
         height: 50%;
         border-radius: 50%;
         -webkit-border-radius: 50%;

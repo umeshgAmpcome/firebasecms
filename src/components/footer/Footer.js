@@ -17,40 +17,45 @@ export default function Footer() {
           <div className="right">
             <div className="first">
               <p>Products</p>
-              <a href="/firebasepages/FirebaseStart">Firebase start</a>
+              <Link to="/firebasepages/FirebaseStart">Firebase start</Link>
               <br />
-              <a href="/firebasepages/FirebaseLoop">Firebase loop </a> <br />
-              <a href="/firebasepages/FirebaseMailroom">Firebase Mailroom</a>
+              <Link to="/firebasepages/FirebaseLoop">Firebase loop </Link>{" "}
               <br />
-              <a href="/firebasepages/FirebaseAgent">Firebase Agent</a>
+              <Link to="/firebasepages/FirebaseMailroom">
+                Firebase Mailroom
+              </Link>
               <br />
-              <a href="/firebasepages/IncorporationApi">Incorporation API</a>
+              <Link to="/firebasepages/FirebaseAgent">Firebase Agent</Link>
               <br />
-              <Link href="/pricing">Pricing</Link>
+              <Link to="/firebasepages/IncorporationApi">
+                Incorporation API
+              </Link>
+              <br />
+              <Link to="/pricing">Pricing</Link>
               <br />
               <Link to="/rewards">Rewards</Link>
             </div>
             <div className="second">
               <p>Company</p>
-              <a href="/company/aboutus">About us</a>
+              <Link to="/company/aboutus">About us</Link>
               <br />
-              <a href="/company/careers">Careers</a>
+              <Link to="/company/careers">Careers</Link>
             </div>
             <div className="third">
               <p>Resources</p>
-              <Link href="https://www.firstbase.io/blog">Blog </Link>
+              <Link to="https://www.firstbase.io/blog">Blog </Link>
               <br />
-              <Link href="https://www.firstbase.io/guide">Founder's Guide</Link>
+              <Link to="https://www.firstbase.io/guide">Founder's Guide</Link>
               <br />
-              <Link href="https://www.firstbase.io/business-name-check">
+              <Link to="https://www.firstbase.io/business-name-check">
                 Free Businees Name Check
               </Link>
               <br />
-              <Link href="https://www.firstbase.io/business-name-check-partners">
+              <Link to="https://www.firstbase.io/business-name-check-partners">
                 Name Check Widget
               </Link>
               <br />
-              <Link href="https://form.typeform.com/to/Tr7SUD3Y?typeform-source=firstbase-io.webflow.io">
+              <Link to="https://form.typeform.com/to/Tr7SUD3Y?typeform-source=firstbase-io.webflow.io">
                 LLC vs. C-Corp
               </Link>
               <br />
@@ -96,7 +101,7 @@ export default function Footer() {
               Instagram .
             </a>
             <a href="https://www.youtube.com/c/Firstbase" alt="_blank">
-              Youtube.
+              Youtube
             </a>
           </div>
         </div>

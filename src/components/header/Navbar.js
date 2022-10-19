@@ -5,12 +5,6 @@ import React from "react"
 export default function Navbar() {
   return (
     <nav>
-      <div className="banner">
-        Firebase Live: Q&A.
-        <a href="https://calendly.com/communityfirstbaseio/firstbase-live-qa">
-          Register Now
-        </a>
-      </div>
       <div className="links">
         <div className="image">
           <Link to="/" className="logo">

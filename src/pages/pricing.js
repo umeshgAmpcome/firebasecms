@@ -1,39 +1,39 @@
 import React from "react"
-// import Hero from "../components/Hero/Hero"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Ctalastsection from "../components/CTAFirebase/Ctalastsection"
-// import Hero from "../components/Hero"
-// import GreatComapanies from "../components/UI/home/GreatComapanies"
-export default function pricing() {
+import Hero from "../components/Hero/Hero"
+
+const pricing = ({ data }) => {
+  console.log(data)
+  const heroheading = data.allContentfulHero.edges[0].node.mainHeading
+  const subheading = data.allContentfulHero.edges[0].node.subHeading
+  const styleButton = data.allContentfulHero.edges[0].node.styleButton
+
   return (
     <Layout>
-      <div>
+      <div className="hero_section">
+        <Hero
+          heading={heroheading}
+          subHead={subheading}
+          styleButton={styleButton}
+        />
         <Ctalastsection />
       </div>
     </Layout>
   )
 }
+export default pricing
 
-// export const query = graphql`
-//   query MyQuery {
-//     allContentfulHero(filter: { pageId: { eq: "pricing" } }) {
-//       edges {
-//         node {
-//           id
-//           mainHeading
-//           subHeading
-//         }
-//       }
-//     }
-//   }
-//   # query MyQuery {
-//   #   allContentfulHero {
-//   #     edges {
-//   #       node {
-//   #         mainHeading
-//   #         subHeading
-//   #       }
-//   #     }
-//   #   }
-//   # }
-// `
+export const query = graphql`
+  query MyQuery {
+    allContentfulHero(filter: { pageId: { eq: "pricing" } }) {
+      edges {
+        node {
+          mainHeading
+          subHeading
+        }
+      }
+    }
+  }
+`

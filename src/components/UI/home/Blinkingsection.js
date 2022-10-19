@@ -6,7 +6,7 @@ export default function Blinkingsection() {
   return (
     <div className="blinksection">
       <div className="block1 block">
-        <img src={logo} alt="" className="brand" />
+        <img src={logo} alt="profile" className="brand" />
         <h3>
           "Excited to be a part of Firstbase’s journey as they democratize
           access to starting companies by making it accessible to everyone."

@@ -30,6 +30,11 @@
   justify-content: center;
   flex-direction: $direction;
 }
+@mixin flexMiddle() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 // flex start
 @mixin flexStartRow() {
@@ -91,7 +96,7 @@
 }
 @mixin transparentlink {
   width: fit-content;
-  padding: .2rem;
+  padding: 0.2rem;
   height: 1.9rem;
   transition: 0.2s;
   color: #ededef;

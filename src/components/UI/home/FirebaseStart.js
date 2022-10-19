@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { BsArrowRightShort } from "react-icons/Bs"
 
 export default function FirebaseStart() {
   return (
@@ -36,25 +37,33 @@ export default function FirebaseStart() {
           </div>
           <div className="firebase_lowerlower">
             <div className="firebase_lowerlower_left mlcontainer">
-              <h3>Open a bank account without an EIN.</h3>
-              <p>
-                Don't wait on the IRS. We'll give you a bank account faster
-                without needing an EIN. We're also authorized by the Internal
-                Revenue Service (IRS) to offer expedited EIN services if needed.
-              </p>
+              <div className="content">
+                <h3>Open a bank account without an EIN.</h3>
+                <p>
+                  Don't wait on the IRS. We'll give you a bank account faster
+                  without needing an EIN. We're also authorized by the Internal
+                  Revenue Service (IRS) to offer expedited EIN services if
+                  needed. <br />
+                  <a href="">
+                    Learn more <BsArrowRightShort />
+                  </a>
+                </p>
+              </div>
               <img
                 src="https://assets.website-files.com/609486d2fafa37698a57db5b/629644bddcd05c1f604af666_ein.svg"
                 alt=""
               />
             </div>
             <div className="firebase_lowerlower_right mlcontainer">
-              <h3>Quickly create a cap table on Carta.</h3>{" "}
-              <p>
-                Our integration with Carta allows you to create a cap table just
-                one click after incorporation. We will prepare your legal
-                documents, file your paperwork, and create all the essential
-                post-incorporation documents.
-              </p>
+              <div className="content">
+                <h3>Quickly create a cap table on Carta.</h3>
+                <p>
+                  Our integration with Carta allows you to create a cap table
+                  just one click after incorporation. We will prepare your legal
+                  documents, file your paperwork, and create all the essential
+                  post-incorporation documents.
+                </p>
+              </div>
               <img
                 src="https://assets.website-files.com/609486d2fafa37698a57db5b/632e448712d3d9c15b713475_Cap-tables-that-work-for-you.png"
                 alt=""
